@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/title"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_shape"
+        android:text="@string/app_name"
+        android:textSize="35sp"
+        android:typeface="serif"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+    <com.pdfview.PDFView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/pdfView"
+        android:layout_below="@id/title"
+        app:zoomEnabled="true"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pdfView"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Reset"
+                android:textColor="@color/sky"
+                android:id="@+id/resetBtn"
+                android:textStyle="bold"
+                android:typeface="serif"
+                android:textSize="20sp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    >
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:hintTextColor="@color/sky"
+                        android:textColorHint="@color/sky"
+                        app:boxStrokeColor="@color/sky"
+                        app:cursorColor="@color/sky"
+                        app:counterTextColor="@color/sky"
+                        app:counterMaxLength="1"
+                        app:counterEnabled="true"
+                        android:layout_marginRight="5dp"
+                        app:endIconMode="clear_text"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Input Number"
+                            android:maxLength="1"
+                            android:inputType="number"
+                            android:textColor="@color/sky"
+                            android:textStyle="bold"
+                            android:id="@+id/inputField1"
+                            android:typeface="serif"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="0dp"
+                        android:layout_height="66dp"
+                        android:layout_weight="1"
+                        android:id="@+id/btn1"
+                        android:text="Submit"
+                        android:textColor="@color/sky"
+                        android:textStyle="bold"
+                        android:typeface="serif"
+                        />
+                </LinearLayout>
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:layout_gravity="center"
+                            >
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check1"
+                                android:text="Square Pattern"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@color/sky"
+                                android:textStyle="bold"
+                                />
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check2"
+                                android:text="Number triangle Pattern"
+                                android:textStyle="bold"
+                                android:textColor="@color/sky"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:layout_gravity="center"
+                            >
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check3"
+                                android:text="Num++ Pyramid"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@color/sky"
+                                android:textStyle="bold"
+                                />
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check4"
+                                android:text="Num++ reverse Pyramid"
+                                android:textStyle="bold"
+                                android:textColor="@color/sky"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:layout_gravity="center"
+                            >
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check5"
+                                android:text="Num change Pyramid"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@color/sky"
+                                android:textStyle="bold"
+                                />
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check6"
+                                android:text="Zero-One Triangle"
+                                android:textStyle="bold"
+                                android:textColor="@color/sky"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:layout_gravity="center"
+                            >
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check7"
+                                android:text="Palindrome Triangle"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@color/sky"
+                                android:textStyle="bold"
+                                />
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check8"
+                                android:text="Rhombus Pattern"
+                                android:textStyle="bold"
+                                android:textColor="@color/sky"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:layout_gravity="center"
+                            >
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check9"
+                                android:text="Diamond Star"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@color/sky"
+                                android:textStyle="bold"
+                                />
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check10"
+                                android:text="Butterfly Star Pattern"
+                                android:textStyle="bold"
+                                android:textColor="@color/sky"
+                                android:clickable="false"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:layout_gravity="center"
+                            >
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check11"
+                                android:text="Square Fill Pattern"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@color/sky"
+                                android:textStyle="bold"
+                                />
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check12"
+                                android:text="Right Half Pyramid"
+                                android:textStyle="bold"
+                                android:textColor="@color/sky"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:layout_gravity="center"
+                            >
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check13"
+                                android:text="Reverse Right Half"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@color/sky"
+                                android:textStyle="bold"
+                                />
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check14"
+                                android:text="Left Half Pyramid"
+                                android:textStyle="bold"
+                                android:textColor="@color/sky"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:layout_gravity="center"
+                            >
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check15"
+                                android:text="Reverse Left Half"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@color/sky"
+                                android:textStyle="bold"
+                                />
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check16"
+                                android:text="Triangle Star"
+                                android:textStyle="bold"
+                                android:textColor="@color/sky"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:layout_gravity="center"
+                            >
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check17"
+                                android:text="Reverse Num Triangle"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@color/sky"
+                                android:textStyle="bold"
+                                />
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check18"
+                                android:text="Mirror Img Triangle"
+                                android:textStyle="bold"
+                                android:textColor="@color/sky"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:layout_gravity="center"
+                            >
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check19"
+                                android:text="Hollow Triangle"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@color/sky"
+                                android:textStyle="bold"
+                                android:clickable="false"
+                                />
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check20"
+                                android:text="Hollow Reverse Triangle"
+                                android:textStyle="bold"
+                                android:textColor="@color/sky"
+                                android:clickable="false"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:layout_gravity="center"
+                            >
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check21"
+                                android:text="Hollow Diamond"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@color/sky"
+                                android:textStyle="bold"
+                                android:clickable="false"
+                                />
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check22"
+                                android:text="Hollow Hourglass"
+                                android:textStyle="bold"
+                                android:textColor="@color/sky"
+                                android:clickable="false"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:layout_gravity="center"
+                            >
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check23"
+                                android:text="Pascal Triangle"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@color/sky"
+                                android:textStyle="bold"
+                                />
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check24"
+                                android:text="Right Pascal"
+                                android:textStyle="bold"
+                                android:textColor="@color/sky"
+                                />
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/check25"
+                                android:text="K Pattern"
+                                android:textStyle="bold"
+                                android:textColor="@color/sky"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/display1"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_stroke"
+                    android:textStyle="bold"
+                    android:textColor="@color/sky"
+                    android:layout_marginTop="15dp"
+                    />
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
